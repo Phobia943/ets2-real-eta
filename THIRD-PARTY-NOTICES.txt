@@ -1,0 +1,13 @@
+ETS2-Fahrzeit
+
+The portable Windows release includes the Microsoft .NET and Windows Desktop
+runtime. Their license and notices are included as separate text files in the
+ZIP package and embedded in the executable. Microsoft .NET is licensed under
+the MIT license; bundled components have the notices stated in those files.
+
+The RenCloud SCS telemetry plugin is NOT bundled and is installed separately.
+This application independently reads its public shared-memory format.
+Format documentation: https://github.com/RenCloud/scs-sdk-plugin
+
+Euro Truck Simulator 2 is a product of SCS Software. This project is an
+independent utility and is not affiliated with SCS Software or TruckersMP.

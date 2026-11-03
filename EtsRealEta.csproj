@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>ETS2-Fahrzeit</AssemblyName>
+    <Version>0.1.0</Version>
+  </PropertyGroup>
+  <ItemGroup><Compile Remove="Tests/**/*.cs" /></ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LICENSE;THIRD-PARTY-NOTICES.txt;DOTNET-LICENSE.txt;DOTNET-THIRD-PARTY-NOTICES.txt;WINDOWSDESKTOP-THIRD-PARTY-NOTICES.txt" />
+  </ItemGroup>
+</Project>

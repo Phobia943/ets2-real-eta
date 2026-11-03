@@ -1,0 +1,28 @@
+name: Tests and Windows package
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Test
+        run: dotnet run --project Tests -c Release
+      - name: Build portable Windows release
+        shell: pwsh
+        run: ./Publish.ps1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ETS2-Fahrzeit-win-x64
+          path: |
+            artifacts/ETS2-Fahrzeit.exe
+            artifacts/ETS2-Fahrzeit-v0.1.0-win-x64.zip
+            artifacts/SHA256SUMS.txt
